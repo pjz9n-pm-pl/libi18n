@@ -174,9 +174,11 @@ $lang->translate("§l§a%.buy", ["item" => "§eApple", "price" => "§c$1000"]);
 #### Result
 
 eng: §l§aYou bought §r§eApple§r§a§l for §r§c$1000§r§a§l.
+
 ![§l§aYou bought §r§eApple§r§a§l for §r§c$1000§r§a§l.](https://user-images.githubusercontent.com/38120936/122003846-945d8700-cdee-11eb-8735-5b06f8412c02.png)
 
 jpn: §l§aあなたは§r§c$1000§r§a§lで§r§eApple§r§a§lを購入しました。
+
 ![§l§aあなたは§r§c$1000§r§a§lで§r§eApple§r§a§lを購入しました。](https://user-images.githubusercontent.com/38120936/122003842-93c4f080-cdee-11eb-8e6a-965370a1569d.png)
 
 ### Parameter translate
@@ -197,7 +199,9 @@ $lang->translate("§l§a%.buy", ["item" => new pjz9n\libi18n\Translation("§e%it
 #### Result
 
 eng: §l§aYou bought §r§eDiamond§r§a§l for §r§c$1000§r§a§l.
+
 ![§l§aYou bought §r§eDiamond§r§a§l for §r§c$1000§r§a§l.](https://user-images.githubusercontent.com/38120936/122004273-29608000-cdef-11eb-8077-30ebfca4911b.png)
 
 jpn: §l§aあなたは§r§c$1000§r§a§lで§r§eダイヤモンド§r§a§lを購入しました。
+
 ![§l§aあなたは§r§c$1000§r§a§lで§r§eダイヤモンド§r§a§lを購入しました。](https://user-images.githubusercontent.com/38120936/122004287-2cf40700-cdef-11eb-8bb6-27ceb784b538.png)
