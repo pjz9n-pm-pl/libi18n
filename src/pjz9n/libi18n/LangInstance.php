@@ -42,7 +42,7 @@ class LangInstance
     public const KEY_SEPARATOR = ".";
 
     /** @var string Parameter regular expression */
-    public const PARAMETER_REGEX = "/%{(.+)}/";
+    public const PARAMETER_REGEX = "/%{([^}]+)}/";
 
     /**
      * Returns a list of available languages
