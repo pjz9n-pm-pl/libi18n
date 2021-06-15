@@ -33,7 +33,7 @@ use pocketmine\utils\TextFormat;
 class LangInstance
 {
     /** @var string Translation key regular expression */
-    public const KEY_REGEX = "/%?(.+)/";
+    public const KEY_REGEX = "/%?([^%]+(?<!\\" . self::KEY_SEPARATOR . "))/";
 
     /** @var string Prefix for translation key */
     public const KEY_PREFIX = "%";
@@ -43,6 +43,9 @@ class LangInstance
 
     /** @var string Parameter regular expression */
     public const PARAMETER_REGEX = "/%{([^}]+)}/";
+
+    /** @var string Prefix regular expression */
+    public const PREFIX_REGEX = "/%(?!%)/";
 
     /**
      * Returns a list of available languages
@@ -154,19 +157,15 @@ class LangInstance
             $this->logger->error("Could not find translation key: $key");
             return $key;
         }
+        //remove percent
+        $key = preg_replace(self::PREFIX_REGEX, "", $key);
         //calculate format
-        $firstHalfKey = "";
         $lastValidFormats = [];
         if ($key !== $realKey) {
-            $firstHalfKey = mb_substr($key, 0, mb_strpos($key, $realKey));
-            //remove percent
-            $percentPosition = strpos($firstHalfKey, "%", -1);//no mb
-            if ($percentPosition !== false) {
-                $firstHalfKey = substr_replace($firstHalfKey, "", $percentPosition);
-            }
-            $lastValidFormats = TextFormatUtils::getLastValidFormats($firstHalfKey);
+            $lastValidFormats = TextFormatUtils::getLastValidFormats(mb_substr($key, 0, mb_strpos($key, $realKey)));
         }
         //resolve relative key
+        $matchKey = $realKey;
         if (strpos($realKey, self::KEY_SEPARATOR) === 0) {
             $realKey = str_replace("\\", self::KEY_SEPARATOR, $class) . $realKey;
             $this->logger->debug("resolved relative key: $realKey");
@@ -204,7 +203,7 @@ class LangInstance
             $text = str_replace($marker, $parameter, $text);
         }
         //complete
-        return $firstHalfKey . $text;
+        return str_replace($matchKey, $text, $key);
     }
 
     public function getName(): string
