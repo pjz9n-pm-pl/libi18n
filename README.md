@@ -173,11 +173,11 @@ $lang->translate("§l§a%.buy", ["item" => "§eApple", "price" => "§c$1000"]);
 
 #### Result
 
-eng: <b><font color="#55FF55">You bought </font></b><font color="#FFFF55">Apple </font><b><font color="#55FF55">
-for </font></b><font color="#FF5555">$1000</font><b><font color="#55FF55">.</font></b>
+eng: §l§aYou bought §r§eApple§r§a§l for §r§c$1000§r§a§l.
+![§l§aYou bought §r§eApple§r§a§l for §r§c$1000§r§a§l.](https://user-images.githubusercontent.com/38120936/122003846-945d8700-cdee-11eb-8735-5b06f8412c02.png)
 
-jpn: <b><font color="#55FF55">あなたは</font></b><font color="#FF5555">$1000</font><b><font color="#55FF55">
-で</font></b><font color="#FFFF55">Apple</font><b><font color="#55FF55">を購入しました。</font></b>
+jpn: §l§aあなたは§r§c$1000§r§a§lで§r§eApple§r§a§lを購入しました。
+![§l§aあなたは§r§c$1000§r§a§lで§r§eApple§r§a§lを購入しました。](https://user-images.githubusercontent.com/38120936/122003842-93c4f080-cdee-11eb-8e6a-965370a1569d.png)
 
 ### Parameter translate
 
