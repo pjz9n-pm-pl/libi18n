@@ -196,8 +196,8 @@ $lang->translate("§l§a%.buy", ["item" => new pjz9n\libi18n\Translation("§e%it
 
 #### Result
 
-eng: <b><font color="#55FF55">You bought </font></b><font color="#FFFF55">Diamond </font><b><font color="#55FF55">
-for </font></b><font color="#FF5555">$1000</font><b><font color="#55FF55">.</font></b>
+eng: §l§aYou bought §r§eDiamond§r§a§l for §r§c$1000§r§a§l.
+![screenshot_20210615_153402](https://user-images.githubusercontent.com/38120936/122004273-29608000-cdef-11eb-8077-30ebfca4911b.png)
 
-jpn: <b><font color="#55FF55">あなたは</font></b><font color="#FF5555">$1000</font><b><font color="#55FF55">
-で</font></b><font color="#FFFF55">ダイヤモンド</font><b><font color="#55FF55">を購入しました。</font></b>
+jpn: §l§aあなたは§r§c$1000§r§a§lで§r§eダイヤモンド§r§a§lを購入しました。
+![screenshot_20210615_153410](https://user-images.githubusercontent.com/38120936/122004287-2cf40700-cdef-11eb-8bb6-27ceb784b538.png)
