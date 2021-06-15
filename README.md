@@ -197,7 +197,7 @@ $lang->translate("§l§a%.buy", ["item" => new pjz9n\libi18n\Translation("§e%it
 #### Result
 
 eng: §l§aYou bought §r§eDiamond§r§a§l for §r§c$1000§r§a§l.
-![screenshot_20210615_153402](https://user-images.githubusercontent.com/38120936/122004273-29608000-cdef-11eb-8077-30ebfca4911b.png)
+![§l§aYou bought §r§eDiamond§r§a§l for §r§c$1000§r§a§l.](https://user-images.githubusercontent.com/38120936/122004273-29608000-cdef-11eb-8077-30ebfca4911b.png)
 
 jpn: §l§aあなたは§r§c$1000§r§a§lで§r§eダイヤモンド§r§a§lを購入しました。
-![screenshot_20210615_153410](https://user-images.githubusercontent.com/38120936/122004287-2cf40700-cdef-11eb-8bb6-27ceb784b538.png)
+![§l§aあなたは§r§c$1000§r§a§lで§r§eダイヤモンド§r§a§lを購入しました。](https://user-images.githubusercontent.com/38120936/122004287-2cf40700-cdef-11eb-8bb6-27ceb784b538.png)
