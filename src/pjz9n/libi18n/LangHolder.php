@@ -23,7 +23,7 @@ declare(strict_types=1);
 
 namespace pjz9n\libi18n;
 
-class LangHolder
+final class LangHolder
 {
     /** @var LangInstance */
     private static $lang;
@@ -46,5 +46,10 @@ class LangHolder
     public static function t($key, array $parameters = [], ?string $class = null, bool $prefixOnly = false, bool $processTextFormat = true): string
     {
         return self::$lang->translate($key, $parameters, $class ?? (debug_backtrace()[1]["class"] ?? null), $prefixOnly, $processTextFormat);
+    }
+
+    private function __construct()
+    {
+        //NOOP
     }
 }
