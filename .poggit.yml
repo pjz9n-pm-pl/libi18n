@@ -1,7 +1,7 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/pjz9n-pm-pl/libi18n
 build-by-default: true
 branches:
-  - pm4
+  - master
 projects:
   libi18n:
     path: ""
