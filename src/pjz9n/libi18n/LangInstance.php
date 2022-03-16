@@ -97,6 +97,7 @@ class LangInstance
     {
         $this->language = $language;
         $this->fallbackLanguage = $fallbackLanguage;
+        $this->localePath = $localePath;
         $this->logger = $logger;
         //load
         $filePath = $this->localePath . DIRECTORY_SEPARATOR . $this->language . ".yml";
