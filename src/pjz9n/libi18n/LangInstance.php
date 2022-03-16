@@ -58,6 +58,9 @@ class LangInstance
     {
         $languages = [];
         foreach (scandir($localePath) as $path) {
+            if ($path === "." || $path === "..") {
+                continue;
+            }
             $path = realpath($path);
             $info = pathinfo($path);
             if (is_file($path) && $info["extension"] === "yml") {
