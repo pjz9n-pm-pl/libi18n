@@ -61,7 +61,6 @@ class LangInstance
             if ($path === "." || $path === "..") {
                 continue;
             }
-            $path = realpath($path);
             $info = pathinfo($path);
             if (is_file($path) && $info["extension"] === "yml") {
                 $languages[$info["filename"]] = $path;
@@ -98,7 +97,6 @@ class LangInstance
     {
         $this->language = $language;
         $this->fallbackLanguage = $fallbackLanguage;
-        $this->localePath = realpath($localePath);
         $this->logger = $logger;
         //load
         $filePath = $this->localePath . DIRECTORY_SEPARATOR . $this->language . ".yml";
