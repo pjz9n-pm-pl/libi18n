@@ -25,6 +25,7 @@ namespace pjz9n\libi18n;
 
 use Logger;
 use pocketmine\utils\TextFormat;
+use Webmozart\PathUtil\Path;
 
 /**
  * Object containing translation data
@@ -61,6 +62,7 @@ class LangInstance
             if ($path === "." || $path === "..") {
                 continue;
             }
+            $path = Path::join($localePath, $path);
             $info = pathinfo($path);
             if (is_file($path) && $info["extension"] === "yml") {
                 $languages[$info["filename"]] = $path;
